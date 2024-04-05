@@ -14,7 +14,7 @@ interface WeatherForecast {
   standalone: true,
   imports: [],
   templateUrl: './hello.component.html',
-  styleUrl: './hello.component.css'
+  styleUrl: './hello.component.scss'
 })
 export class HelloComponent implements OnInit{
   public forecasts: WeatherForecast[] = [];
@@ -26,7 +26,7 @@ export class HelloComponent implements OnInit{
   }
 
   getForecasts() { //was missing / before weatherforecast
-    this.http.get<WeatherForecast[]>(environment.baseUrl +'/weatherforecast').subscribe(
+    this.http.get<WeatherForecast[]>(environment.baseUrl +'WeatherForecast').subscribe(
       (result) => {
         this.forecasts = result;
       },

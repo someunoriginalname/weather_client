@@ -19,7 +19,7 @@ export class CountriesComponent {
   }
 
   getCountries() { //was missing / before weatherforecast
-    this.http.get<Country[]>(environment.baseUrl +'/api/Countries').subscribe(
+    this.http.get<Country[]>(environment.baseUrl +'api/Countries').subscribe(
       {
         next: result => this.countries = result,
         error: error => console.error(error)

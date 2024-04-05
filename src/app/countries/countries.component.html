@@ -1,1 +1,23 @@
-<p>countries works!</p>
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+@if(!countries){
+<p><em>Loading...</em></p>}
+@else{
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Temp. (C)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (country of countries; track $index) {
+        <tr>
+            <td>{{ countries[1].name }}</td>
+            <td>{{ countries[0].name }}</td>
+        </tr>
+    }
+    </tbody>
+</table>
+}
