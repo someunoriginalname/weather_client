@@ -1,0 +1,20 @@
+<h1>Cities</h1>
+<p>Here's a list of cities: feel free to play with it.</p>
+<p *ngIf="!cities"><em>Loading...</em></p>
+<table [hidden]="!cities">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Lat</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (city of cities; track $index) {
+      <tr>
+          <td>let city {{ city.id }}</td>
+      </tr>
+  }
+  </tbody>
+</table>
