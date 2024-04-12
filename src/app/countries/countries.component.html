@@ -1,25 +1,25 @@
-<h1 id="tableLabel">Countries</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
-@if(!countries){
-<p><em>Loading...</em></p>}
-@else{
-<table class="table table=stripe">
+<h1>countries</h1>
+<table class="table table-striped">
     <thead>
         <tr>
+            <th>Id</th>
             <th>Name</th>
-            <th>ISO2</th>
-            <th>ISO3</th>
+            <th>Iso2</th>
+            <th>Iso3</th>
         </tr>
     </thead>
     <tbody>
         @for (country of countries; track $index) {
-        <tr>
-            <td>{{ countries[$index].name }}</td>
-            <td>{{ countries[$index].iso2 }}</td>
-            <td>{{ countries[$index].iso3 }}</td>
-        </tr>
-    }
+            <tr>
+                <td>
+                    <a [routerLink] = "['/cities',country.countryId]">
+                        {{ country.countryId }}
+                    </a>
+                </td>
+                <td>{{ country.name }}</td>
+                <td>{{ country.iso2 }}</td>
+                <td>{{ country.iso3 }}</td>
+            </tr>
+        }
     </tbody>
 </table>
-}

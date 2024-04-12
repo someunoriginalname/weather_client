@@ -1,5 +1,4 @@
 export interface City {
-id: any;
     cityId: number;
     latitude: number;
     longitude: number;
