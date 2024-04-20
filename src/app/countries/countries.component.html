@@ -12,7 +12,7 @@
         @for (country of countries; track $index) {
             <tr>
                 <td>
-                    <a [routerLink] = "['/cities',country.countryId]">
+                    <a [routerLink] = "['/countries/',country.countryId]">
                         {{ country.countryId }}
                     </a>
                 </td>
