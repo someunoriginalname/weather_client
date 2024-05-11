@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     };
     this.authService.login(loginRequest).subscribe({
       next: result => {
-        console.log(result.Message);
+        console.log(result);
         this.router.navigate(['/'])
       },
       error: error => console.error(error)
